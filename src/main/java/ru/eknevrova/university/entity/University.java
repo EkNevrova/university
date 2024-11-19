@@ -6,15 +6,10 @@ public class University {
     private Professor professor;
     private Subject subject;
 
-    public University (String name, Student student, Professor professor, Subject subject) {
+    public University (String name) {
         this.name = name;
-        this.student = student;
-        this.professor = professor;
-        this.subject = subject;
     }
 
-    public University () {
-    }
 
     public String getName() {
         return this.name;

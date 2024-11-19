@@ -2,13 +2,13 @@ package ru.eknevrova.university.entity;
 
 public class Subject {
     private String name;
+    private University university;
     private Student student;
     private Professor professor;
 
-    public Subject (String name, Student student, Professor professor) {
+    public Subject (String name, University university) {
         this.name = name;
-        this.student = student;
-        this.professor = professor;
+        this.university = university;
     }
 
     public Subject () {
@@ -16,6 +16,10 @@ public class Subject {
 
     public String getName() {
         return this.name;
+    }
+
+    public University getUniversity() {
+        return this.university;
     }
 
     public Professor getProfessor() {

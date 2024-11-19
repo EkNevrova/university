@@ -4,7 +4,7 @@ public interface GeneralActions {
 
     void belong();
     void drinkCoffe() {
-        System.out.println("Утром перед лекцией пьёт кофе");
+        System.out.println("Пьёт кофе");
     };
     void writeOnBoard();
 }

@@ -9,11 +9,9 @@ public class Student implements GeneralActions, StudentActions {
     private Professor professor;
     private Subject subject;
 
-    public Student (String name, University university, Professor professor, Subject subject) {
+    public Student (String name, University university) {
         this.name = name;
         this.university = university;
-        this.professor = professor;
-        this.subject = subject;
     }
 
     public Student () {
@@ -35,7 +33,7 @@ public class Student implements GeneralActions, StudentActions {
 
     @Override
     public void study() {
-        System.out.println("Студент " + name + " изучает " + subject.getName() + " у профессора " + professor.getName());
+        System.out.println("Студент " + name + " на лекции по предмету " + subject.getName() + " у профессора " + professor.getName());
     }
 
     @Override

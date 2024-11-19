@@ -9,10 +9,9 @@ public class Professor implements GeneralActions, ProfessorActions {
     private Student student;
     private Subject subject;
 
-    public Professor (String name, University university, Student student, Subject subject) {
+    public Professor (String name, University university, Subject subject) {
         this.name = name;
         this.university = university;
-        this.student = student;
         this.subject = subject;
     }
 
@@ -35,7 +34,7 @@ public class Professor implements GeneralActions, ProfessorActions {
 
     @Override
     public void teach() {
-        System.out.println("Профессор " + name + " преподаёт " + subject.getName() + " студенту " + student.getName());
+        System.out.println("Профессор " + name + " преподаёт предмет " + subject.getName() + " студенту " + student.getName());
     }
 
     @Override
