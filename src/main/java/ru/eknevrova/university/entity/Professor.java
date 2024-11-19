@@ -20,48 +20,50 @@ public class Professor implements GeneralActions, ProfessorActions {
 
     @Override
     public void belong() {
-        System.out.println("Профессор " + name + " преподаёт в университете " + university.getName() + " " + subject.getName() + " предмет");
+        System.out.println("Профессор " + name + " преподаёт в " + university.getName() + " " + subject.getName());
     }
 
     @Override
     public void drinkCoffe() {
+        System.out.println("Профессор " + name + " выпил чашечку кофе и пошёл в аудиторию");
     }
 
     @Override
     public void writeOnBoard() {
-        System.out.println("Профессор " + name + " пишет на доске условие задачи");
+        System.out.println("Профессор " + name + " написал на доске условие задачи");
     }
 
     @Override
     public void teach() {
-        System.out.println("Профессор " + name + " преподаёт предмет " + subject.getName() + " студенту " + student.getName());
+        System.out.println("У профессора " + name + " студент " + student.getName() + " изучает " + subject.getName());
     }
 
     @Override
     public void gradeExam() {
-        System.out.println("Профессор " + name + " принимает экзамен по предмету " + subject.getName() + " у студента " + student.getName());
+        System.out.println("Профессор " + name + " принимает экзамен по " + subject.getName() + " у студента " + student.getName());
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public Student getStudent() {
-        return this.student;
+        return student;
     }
 
-    public Student setStudent(Student student) {
+    public void setStudent(Student student) {
         this.student = student;
     }
 
     public Subject getSubject() {
-        return this.subject;
+        return subject;
     }
 
-    public Subject setSubject(Subject subject) {
+    public void setSubject(Subject subject) {
         this.subject = subject;
     }
+
     public University getUniversity() {
-        return this.university;
+        return university;
     }
 }

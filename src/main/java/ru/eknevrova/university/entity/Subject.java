@@ -15,26 +15,26 @@ public class Subject {
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public University getUniversity() {
-        return this.university;
+        return university;
     }
 
     public Professor getProfessor() {
-        return this.professor;
+        return professor;
     }
 
-    public Professor setProfessor(Professor professor) {
+    public void setProfessor(Professor professor) {
         this.professor = professor;
     }
 
     public Student getStudent() {
-        return this.student;
+        return student;
     }
 
-    public Student setStudent(Student student) {
+    public void setStudent(Student student) {
         this.student = student;
     }
 }

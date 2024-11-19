@@ -19,11 +19,12 @@ public class Student implements GeneralActions, StudentActions {
 
     @Override
     public void belong() {
-        System.out.println("Студент " + name + " из университета " + university.getName());
+        System.out.println("Студент " + name + " учится в " + university.getName());
     }
 
     @Override
     public void drinkCoffe() {
+        System.out.println("Студент " + name + " выпил чашечку кофе и пошёл в аудиторию");
     }
 
     @Override
@@ -33,35 +34,35 @@ public class Student implements GeneralActions, StudentActions {
 
     @Override
     public void study() {
-        System.out.println("Студент " + name + " на лекции по предмету " + subject.getName() + " у профессора " + professor.getName());
+        System.out.println("Студент " + name + " на лекции по " + subject.getName() + " у профессора " + professor.getName());
     }
 
     @Override
     public void takeExam() {
-        System.out.println("Студент " + name + " сдаёт экзамене по предмету " + subject.getName() + " профессору " + professor.getName());
+        System.out.println("Студент " + name + " сдаёт экзамен по " + subject.getName() + " профессору " + professor.getName());
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public Professor getProfessor() {
-        return this.professor;
+        return professor;
     }
 
-    public Professor setProfessor(Professor professor) {
+    public void setProfessor(Professor professor) {
         this.professor = professor;
     }
 
     public Subject getSubject() {
-        return this.subject;
+        return subject;
     }
 
-    public Subject setSubject(Subject subject) {
+    public void setSubject(Subject subject) {
         this.subject = subject;
     }
 
     public University getUniversity() {
-        return this.university;
+        return university;
     }
 }

@@ -13,26 +13,58 @@ public class _Main {
 
         Subject mathematics = new Subject("Матемактика", economicUniversity);
         Subject economy = new Subject("Экономика", economicUniversity);
-        Subject politics = new Subject("Политология", economicUniversity);
         Subject accounting = new Subject("Бухгалтерский учёт", economicUniversity);
 
         Professor mathProfessor = new Professor("Сергей Алексеевич", economicUniversity, mathematics);
         Professor econProfessor = new Professor("Иван Андреевич", economicUniversity, economy);
-        Professor politProfessor = new Professor("Марк Иосифович", economicUniversity, politics);
         Professor accountProfessor = new Professor("Эвелина Родионовна", economicUniversity, accounting);
 
         Student student1 = new Student("Пётр Богомолов", economicUniversity);
-        Student student2 = new Student("Инна Вертинская", economicUniversity);
-        Student student3 = new Student("Андрей Петров", economicUniversity);
-        Student student4 = new Student("Полина Быстрова", economicUniversity);
-        Student student5 = new Student("Пётр Богомолов", economicUniversity);
-        Student student6 = new Student("Елена Вершинина", economicUniversity);
-        Student student7 = new Student("Артём Борисов", economicUniversity);
-        Student student8 = new Student("Вероника Крылова", economicUniversity);
+        Student student2 = new Student("Кирилл Быстров", economicUniversity);
+        Student student3 = new Student("Артём Борисов", economicUniversity);
 
         StudentService studentService = new StudentService();
         ProfessorService professorService = new ProfessorService();
 
+        mathProfessor.setSubject(mathematics);
+        mathProfessor.setStudent(student1);
+        student1.setSubject(mathematics);
+        student1.setProfessor(mathProfessor);
+        professorService.professorTeach(mathProfessor, mathProfessor);
+        studentService.studentStudy(student1, student1);
 
+        econProfessor.setSubject(economy);
+        econProfessor.setStudent(student2);
+        student2.setSubject(economy);
+        student2.setProfessor(econProfessor);
+        professorService.professorGradeExam(econProfessor, econProfessor);
+        studentService.studentTakeExam(student2, student2);
+
+        accountProfessor.setSubject(accounting);
+        accountProfessor.setStudent(student3);
+        student3.setSubject(accounting);
+        student3.setProfessor(accountProfessor);
+        studentService.studentStudy(student3, student3);
+        professorService.professorTeach(accountProfessor, accountProfessor);
+        professorService.professorGradeExam(accountProfessor, accountProfessor);
+        studentService.studentTakeExam(student3, student3);
+
+        econProfessor.setStudent(student3);
+        student3.setSubject(economy);
+        student3.setProfessor(econProfessor);
+        professorService.professorGradeExam(econProfessor, econProfessor);
+        studentService.studentTakeExam(student3, student3);
+
+        mathProfessor.setStudent(student2);
+        student2.setSubject(mathematics);
+        student2.setProfessor(mathProfessor);
+        professorService.professorTeach(mathProfessor, mathProfessor);
+        studentService.studentStudy(student2, student2);
+
+        accountProfessor.setStudent(student1);
+        student1.setSubject(accounting);
+        student1.setProfessor(accountProfessor);
+        professorService.professorTeach(accountProfessor, accountProfessor);
+        studentService.studentStudy(student1, student1);
     }
 }
