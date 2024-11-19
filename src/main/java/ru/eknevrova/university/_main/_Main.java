@@ -1,5 +1,4 @@
 package ru.eknevrova.university._main;
-
 import ru.eknevrova.university.entity.Professor;
 import ru.eknevrova.university.entity.Student;
 import ru.eknevrova.university.entity.Subject;
@@ -8,7 +7,7 @@ import ru.eknevrova.university.util.ProfessorService;
 import ru.eknevrova.university.util.StudentService;
 
 public class _Main {
-    public static void main (String args[]) {
+    public static void main (String[] args) {
         University economicUniversity = new University("Экономический университет");
 
         Subject mathematics = new Subject("Матемактика", economicUniversity);

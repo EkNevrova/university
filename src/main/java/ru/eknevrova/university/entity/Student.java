@@ -1,5 +1,4 @@
 package ru.eknevrova.university.entity;
-
 import ru.eknevrova.university.service.GeneralActions;
 import ru.eknevrova.university.service.StudentActions;
 
